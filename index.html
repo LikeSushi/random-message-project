@@ -1,28 +1,10 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Message</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            padding: 50px; 
-            background-color: #f5f5f5; 
-        }
-        #message { 
-            font-size: 24px; 
-            margin-top: 20px; 
-        }
-        video { 
-            margin-top: 20px; 
-            width: 80%; 
-            max-width: 800px;
-            height: auto; 
-            border-radius: 10px;
-        }
-    </style>
+    <title>Random Background, Message, and Song</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>🎥 วิดีโอของคุณ 🎥</h2>
@@ -34,52 +16,24 @@
     </video>
 
     <h3 id="message">Loading...</h3>
-    
-</body>
-</html>
-
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข้อความสุ่มจากฉัน</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        .message {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
 
     <h1>สิ่งสุดท้ายที่อยากจะให้</h1>
-    <p>ลองกดปุ่มด้านล่างดูสิ</p>
+    <p>ของขวัญชิ้นสุดท้าย</p>
     
     <div class="message" id="randomMessage">😊 ยินดีที่ได้เจอนะ 😊</div>
-    
-    <button onclick="showRandomMessage()">ของขวัญสุดท้าย</button>
+
+    <!-- เล่นเพลง Billkin - สวยงามเสมอ -->
 
     <script>
-        // เก็บข้อความไว้ในอาร์เรย์
+        // รูปภาพพื้นหลังแบบสุ่มจากโฟลเดอร์ images
+        const backgrounds = [
+            'images/background1.jpg',
+            'images/background2.jpg',
+            'images/background3.jpg',
+            'images/background4.jpg'
+        ];
+
+        // ข้อความสุ่ม
         const messages = [
             "จงเชื่อมั่นในตัวเอง เพราะเรามีศักยภาพมากกว่าที่คิด 💪💙",
             "เส้นทางข้างหน้าอาจไม่ง่าย แต่ทุกก้าวที่กล้าก้าวคือชัยชนะของตัวเอง 🚀🔥",
@@ -93,12 +47,14 @@
             "ความสำเร็จไม่ได้อยู่ที่จุดหมาย แต่อยู่ที่การไม่ยอมแพ้ระหว่างทาง 🚀🌟"
         ];
 
-        // ฟังก์ชันสุ่มข้อความ
-        function showRandomMessage() {
+        // เมื่อโหลดหน้าเว็บให้สุ่มพื้นหลังและข้อความ
+        window.onload = function() {
+            const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+            document.body.style.backgroundImage = `url('${randomBg}')`;
+
             const randomIndex = Math.floor(Math.random() * messages.length);
             document.getElementById("randomMessage").innerText = messages[randomIndex];
-        }
+        };
     </script>
-
 </body>
 </html>
