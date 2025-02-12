@@ -3,11 +3,13 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: black; /* เปลี่ยนเป็นสีดำแทนสีขาว */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh;
+    width: 100%;
+    color: black;
 }
 
 /* ปรับขนาดวิดีโอ */
@@ -19,17 +21,39 @@ video {
     border-radius: 10px;
 }
 
-/* ข้อความที่สุ่มมา */
+/* ปรับสไตล์ข้อความที่แสดงแบบสุ่ม */
 .message {
     font-size: 24px;
     font-weight: bold;
-    color: black; /* เปลี่ยนเป็นสีดำ */
-    padding: 10px; /* เพิ่มระยะห่างรอบข้อความ */
-    border-radius: 8px; /* ทำให้ขอบมน */
-    display: inline-block; /* ทำให้พื้นหลังพอดีกับข้อความ */
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 /* ซ่อนปุ่มควบคุมของเพลง */
 audio {
     display: none;
+}
+
+/* 🔗 สไตล์ลิงก์ Instagram */
+.instagram-container {
+    margin-top: 20px;
+}
+
+.instagram-link {
+    font-size: 20px;
+    color: #E4405F;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.instagram-link:hover {
+    background-color: #E4405F;
+    color: white;
 }

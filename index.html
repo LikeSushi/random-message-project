@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Background, Message, and Hidden Audio</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- ใช้ Font Awesome สำหรับไอคอน Instagram -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <h2>🎥 วิดีโอของคุณ 🎥</h2>
@@ -18,7 +21,7 @@
     <h3 id="message">Loading...</h3>
 
     <h1>สิ่งสุดท้ายที่อยากจะให้</h1>
-    <h3>ของขวัญชิ้นสุดท้าย</h3>
+    <p>ของขวัญชิ้นสุดท้าย</p>
     
     <div class="message" id="randomMessage">😊 ยินดีที่ได้เจอนะ 😊</div>
 
@@ -27,11 +30,18 @@
         <source src="audio/Billkin-Ever-Forever.mp3" type="audio/mp3">
     </audio>
 
+    <!-- 🔗 ลิงก์ไป Instagram -->
+    <div class="instagram-container">
+        <a href="https://www.instagram.com/chard_kung?igsh=Y2dhZ2Eycnk4amYx&utm_source=qr" target="_blank" class="instagram-link">
+            <i class="fab fa-instagram"></i> ติดตามฉันบน Instagram
+        </a>
+    </div>
+
     <script>
         // รูปภาพพื้นหลังแบบสุ่มจากโฟลเดอร์ images
         const backgrounds = [
             'images/100.jpg'
-           
+
         ];
 
         // ข้อความสุ่ม
