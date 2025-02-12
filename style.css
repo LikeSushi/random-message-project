@@ -1,3 +1,4 @@
+/* ตั้งค่าพื้นฐาน */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -5,14 +6,11 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
+    background-attachment: fixed;
+    color: black; /* เปลี่ยนเป็นสีดำแทนสีขาว */
 }
 
-#message {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
+/* ปรับขนาดวิดีโอ */
 video {
     margin-top: 20px;
     width: 80%;
@@ -21,39 +19,17 @@ video {
     border-radius: 10px;
 }
 
+/* ข้อความที่สุ่มมา */
 .message {
     font-size: 24px;
     font-weight: bold;
-    color: white;
-    margin-top: 20px;
+    color: black; /* เปลี่ยนเป็นสีดำ */
+    padding: 10px; /* เพิ่มระยะห่างรอบข้อความ */
+    border-radius: 8px; /* ทำให้ขอบมน */
+    display: inline-block; /* ทำให้พื้นหลังพอดีกับข้อความ */
 }
 
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-}
-
-#message {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-video {
-    margin-top: 20px;
-    width: 80%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.message {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin-top: 20px;
+/* ซ่อนปุ่มควบคุมของเพลง */
+audio {
+    display: none;
 }
